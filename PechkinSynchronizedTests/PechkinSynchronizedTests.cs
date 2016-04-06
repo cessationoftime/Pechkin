@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Specialized;
 using System.Threading;
 using Common.Logging;
 using Pechkin;
 using Pechkin.Synchronized;
 using PechkinTests;
 using Xunit;
+using Common.Logging.Configuration;
 
 namespace PechkinSynchronizedTests
 {
@@ -53,7 +53,7 @@ namespace PechkinSynchronizedTests
                                          Thread.CurrentThread.Name = "test thread " + (_threadId++).ToString();
                                      }
 
-                                     ILog log = LogManager.GetCurrentClassLogger();
+                                     ILog log = LogManager.GetLogger<PechkinSynchronizedTests>(); 
                                      log.Trace("T:" + Thread.CurrentThread.Name + " Thread started");
 
                                      string html = GetResourceString("PechkinTests.Resources.page.html");

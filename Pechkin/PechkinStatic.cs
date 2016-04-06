@@ -15,7 +15,7 @@ namespace Pechkin
     /// </summary>
     public static class PechkinStatic
     {
-        private static readonly ILog Log = LogManager.GetCurrentClassLogger();
+        private static readonly ILog Log = LogManager.GetLogger(typeof(PechkinStatic));
 
         private static bool _inited;
         private static bool _useHack;

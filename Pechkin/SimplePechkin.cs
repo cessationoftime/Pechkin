@@ -16,7 +16,7 @@ namespace Pechkin
     /// </summary>
     public class SimplePechkin : IPechkin, IDisposable
     {
-        private readonly ILog _log = LogManager.GetCurrentClassLogger();
+        private readonly ILog _log = LogManager.GetLogger<SimplePechkin>();
 
         private readonly GlobalConfig _globalConfig;
         private IntPtr _globalConfigUnmanaged;
